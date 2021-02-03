@@ -1,31 +1,35 @@
-<h3>Service's List</h3>
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Descripción</th>
-            <th scope="col">código</th>
-            <th scope="col">Valor</th>
-            <th> </th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let service of services">
-            <td>{{service.nombre}}</td>
-            <td>{{service.descripcion}}</td>
-            <td>{{service.codigo}}</td>
-            <td>{{service.valor}}</td>
-            <td>
-              <a class="btn btn-info">
-                <fa-icon class="text-white" [icon]="faPen" size="1x"></fa-icon>
-              </a>
-              <a class="btn btn-danger">
-                <fa-icon class="text-white" [icon]="faTrash" size="1x"></fa-icon>
-              </a>
-              <a class="btn btn-warning">
-                <fa-icon [icon]="faStar" size="1x"></fa-icon>
-              </a>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="my-3 p-3 bg-white rounded shadow-sm">
+
+  <h4 class="border-bottom border-gray pb-2 mb-0">Service's List</h4>
+  <table class="table table-hover">
+      <thead>
+          <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">código</th>
+              <th scope="col">Valor</th>
+              <th> </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let service of services">
+              <td>{{service.nombre}}</td>
+              <td>{{service.descripcion}}</td>
+              <td>{{service.codigo}}</td>
+              <td>{{service.valor}}</td>
+              <td>
+                <a class="btn btn-info hello-color">
+                  <fa-icon class="text-white" [icon]="faPen" size="1x"></fa-icon>
+                </a>
+                <a class="btn btn-danger">
+                  <fa-icon class="text-white" [icon]="faTrash" size="1x"></fa-icon>
+                </a>
+                <a class="btn btn-warning">
+                  <fa-icon [icon]="faStar" size="1x"></fa-icon>
+                </a>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+
+</div>
