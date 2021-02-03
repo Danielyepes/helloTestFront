@@ -2,20 +2,30 @@
 <table class="table table-hover">
     <thead>
         <tr>
-            <th scope="col">#</th>
             <th scope="col">Nombre</th>
             <th scope="col">Descripción</th>
             <th scope="col">código</th>
             <th scope="col">Valor</th>
+            <th> </th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let service of services">
-            <th scope="row">1</th>
             <td>{{service.nombre}}</td>
             <td>{{service.descripcion}}</td>
             <td>{{service.codigo}}</td>
             <td>{{service.valor}}</td>
+            <td>
+              <a class="btn btn-info">
+                <fa-icon class="text-white" [icon]="faPen" size="1x"></fa-icon>
+              </a>
+              <a class="btn btn-danger">
+                <fa-icon class="text-white" [icon]="faTrash" size="1x"></fa-icon>
+              </a>
+              <a class="btn btn-warning">
+                <fa-icon [icon]="faStar" size="1x"></fa-icon>
+              </a>
+            </td>
         </tr>
     </tbody>
 </table>
