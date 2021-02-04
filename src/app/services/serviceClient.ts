@@ -19,4 +19,12 @@ export class ServiceClient {
             .get<Service[]>(this.apiUrl + '/test/services')
     }
 
+    addServices(service: Service) : Observable<Service> {
+      let url = this.apiUrl + "/test/service";
+
+      return this.http
+        .post<Service>(url, service);
+
+    }
+
 }

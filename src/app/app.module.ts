@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CreateServiceComponent } from './components/create-service/create-service.component';
  import{ HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MessagesComponent } from './components/messages/messages.component';
 
 
 @NgModule({
@@ -18,11 +20,14 @@ import { CreateServiceComponent } from './components/create-service/create-servi
     MenuComponent,
     ListComponent,
     DetailComponent,
-    CreateServiceComponent
+    CreateServiceComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule

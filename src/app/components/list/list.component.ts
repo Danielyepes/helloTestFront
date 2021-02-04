@@ -21,10 +21,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.serviceClient.getServices().subscribe(response =>{
-      console.log(response)
       this.services= response;
-    }, error =>{
-      console.error(error);
     });
   }
 

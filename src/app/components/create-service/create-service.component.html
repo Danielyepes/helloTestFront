@@ -2,18 +2,18 @@
 
   <h4 class="border-bottom border-gray pb-2 mb-0">Crear servicio</h4>
 
-  <form class="create-form">
+  <form class="create-form" [formGroup]="addServiceForm" (ngSubmit)="addService()">
     <div class="form-group">
       <label for="serviceInput">Nombre</label>
-      <input type="text" class="form-control" id="serviceInput" aria-describedby="emailHelp">
+      <input type="text" class="form-control" formControlName="nombre"  id="serviceInput" aria-describedby="serviceInput" required>
     </div>
     <div class="form-group">
       <label for="descripcionText">Descripción</label>
-      <textarea class="form-control" id="descripcionText"></textarea>
+      <textarea class="form-control" formControlName="descripcion" id="descripcionText" required></textarea>
     </div>
     <div class="form-group">
       <label for="codeInput">Código</label>
-      <input type="text" class="form-control" id="codeInput" aria-describedby="emailHelp">
+      <input type="text" class="form-control" formControlName="codigo" id="codeInput" aria-describedby="codeInput" required>
     </div>
     <div class="form-group">
       <label for="input-1" class="control-label">Valor: </label>
