@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Service } from 'src/app/models/service';
 import { ServiceClient } from 'src/app/services/serviceClient';
+import { StarRatingComponent } from 'ng-starrating';
 
 @Component({
   selector: 'app-create-service',
@@ -11,6 +12,8 @@ import { ServiceClient } from 'src/app/services/serviceClient';
 export class CreateServiceComponent implements OnInit {
 
   service : Service;
+
+  valor : number;
 
   addServiceForm = this.formBuilder.group({
     nombre : ['',Validators.required],
@@ -33,10 +36,7 @@ export class CreateServiceComponent implements OnInit {
     service.descripcion = this.addServiceForm.value.descripcion;
     service.codigo = this.addServiceForm.value.codigo;
 
-    // contamos el numero de estrellas
-    let valor = this.countStars();
-
-    service.valor = valor;
+    service.valor = this.valor;
 
     if (this.addServiceForm.valid){
       //enviamos el servicio al rest
@@ -54,15 +54,10 @@ export class CreateServiceComponent implements OnInit {
     this.addServiceForm.reset();
   }
 
-  countStars() : number{
 
-    let number =  0 ;
-    //verificamos la cantidad de marcas
-    number = document.getElementsByClassName("glyphicon-star").length;
+  onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) {
 
-    console.log(number);
-
-    return number;
+      this.valor =  $event.newValue;
   }
 
 }

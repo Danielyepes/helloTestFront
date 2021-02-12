@@ -18,7 +18,7 @@
               <td>{{service.codigo}}</td>
               <td>{{service.valor}}</td>
               <td>
-                <a class="btn btn-info hello-color">
+                <a [routerLink]="['/detail/'+service._id]" class="btn btn-info hello-color">
                   <fa-icon class="text-white" [icon]="faPen" size="1x"></fa-icon>
                 </a>
                 <a class="btn btn-danger">

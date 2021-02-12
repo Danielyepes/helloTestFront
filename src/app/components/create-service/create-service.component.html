@@ -17,7 +17,7 @@
     </div>
     <div class="form-group">
       <label for="input-1" class="control-label">Valor: </label>
-      <div class="stars starrr" data-rating="0"></div>
+      <star-rating value="0" [totalstars]="5" checkedcolor="#00bcd4" uncheckedcolor="gray" size="30px" readonly="false" (rate)="onRate($event)"></star-rating>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit">Crear</button>
 

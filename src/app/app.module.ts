@@ -9,9 +9,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CreateServiceComponent } from './components/create-service/create-service.component';
- import{ HttpClientModule } from '@angular/common/http';
+import{ HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MessagesComponent } from './components/messages/messages.component';
+import { RatingModule } from 'ng-starrating';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { MessagesComponent } from './components/messages/messages.component';
     ReactiveFormsModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    RatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
