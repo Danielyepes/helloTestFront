@@ -54,7 +54,6 @@ export class CreateServiceComponent implements OnInit {
     this.addServiceForm.reset();
   }
 
-
   onRate($event:{oldValue:number, newValue:number, starRating:StarRatingComponent}) {
 
       this.valor =  $event.newValue;

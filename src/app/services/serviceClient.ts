@@ -43,15 +43,10 @@ export class ServiceClient {
     }
 
     deleteService(id: string) :Observable<Service>{
-      let url = this.apiUrl + "/test/service";
-
-      let httpParams = new HttpParams();
-      httpParams.set('id', id);
-
-      let options = { params: httpParams };
+      let url = this.apiUrl + '/test/service/'+id;
 
       return this.http
-        .delete<Service>(url,options);
+        .delete<Service>(url);
 
     }
 

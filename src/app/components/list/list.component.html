@@ -21,7 +21,7 @@
                 <a [routerLink]="['/detail/'+service._id]" class="btn btn-info hello-color">
                   <fa-icon class="text-white" [icon]="faPen" size="1x"></fa-icon>
                 </a>
-                <a class="btn btn-danger">
+                <a class="btn btn-danger" (click)="open(content, service._id, service.nombre)">
                   <fa-icon class="text-white" [icon]="faTrash" size="1x"></fa-icon>
                 </a>
                 <a class="btn btn-warning">
@@ -33,3 +33,24 @@
   </table>
 
 </div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Confirmación de borrado</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <p>¿Está seguro de borrar el servicio <strong>{{nombreService}}</strong>?</p>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="delete(idServiceToDelete)">Borrar</button>
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Cerrar</button>
+  </div>
+</ng-template>
+
