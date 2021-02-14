@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Service } from 'src/app/models/service';
 import { ServiceClient } from 'src/app/services/serviceClient';
-import { faPen, faStar, faTrash } from '@fortawesome/free-solid-svg-icons';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { faPen, faComment, faTrash } from '@fortawesome/free-solid-svg-icons';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-list',
@@ -13,7 +13,7 @@ export class ListComponent implements OnInit {
 
   faPen = faPen;
   faTrash = faTrash;
-  faStar = faStar;
+  faComment = faComment;
 
   nombreService = '';
   idServiceToDelete = '';
