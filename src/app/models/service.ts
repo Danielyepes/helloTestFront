@@ -5,6 +5,8 @@ export class Service {
     descripcion: string;
     codigo: string;
     valor: number;
-    //comentarios: string;
+    calificaciones: Array<any>;
+    promedioCalificacion : number;
+
 
 }

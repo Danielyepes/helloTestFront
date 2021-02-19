@@ -30,6 +30,7 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/js/bootstrap.min.js",
               "node_modules/@popperjs/core/dist/umd/popper.min.js"
             ]
           },

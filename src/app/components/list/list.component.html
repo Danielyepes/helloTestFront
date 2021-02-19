@@ -8,6 +8,7 @@
               <th scope="col">Descripción</th>
               <th scope="col">código</th>
               <th scope="col">Valor</th>
+              <th scope="col">Calififacion Prom.</th>
               <th> </th>
           </tr>
       </thead>
@@ -17,6 +18,7 @@
               <td>{{service.descripcion}}</td>
               <td>{{service.codigo}}</td>
               <td>{{service.valor}}</td>
+              <td>{{service.promedioCalificacion | number: '1.1-1' }}</td>
               <td>
                 <a [routerLink]="['/detail/'+service._id]" class="btn btn-info hello-color">
                   <fa-icon class="text-white" [icon]="faPen" size="1x"></fa-icon>
@@ -24,7 +26,7 @@
                 <a class="btn btn-danger" (click)="open(content, service._id, service.nombre)">
                   <fa-icon class="text-white" [icon]="faTrash" size="1x"></fa-icon>
                 </a>
-                <a class="btn btn-warning">
+                <a [routerLink]="['/calification/'+service._id]" class="btn btn-warning">
                   <fa-icon [icon]="faComment" size="1x"></fa-icon>
                 </a>
               </td>

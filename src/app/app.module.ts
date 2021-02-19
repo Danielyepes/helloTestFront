@@ -13,6 +13,7 @@ import{ HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MessagesComponent } from './components/messages/messages.component';
 import { RatingModule } from 'ng-starrating';
+import { CalificarServicioComponent } from './components/calificar-servicio/calificar-servicio.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { RatingModule } from 'ng-starrating';
     ListComponent,
     DetailComponent,
     CreateServiceComponent,
-    MessagesComponent
+    MessagesComponent,
+    CalificarServicioComponent,
   ],
   imports: [
     BrowserModule,

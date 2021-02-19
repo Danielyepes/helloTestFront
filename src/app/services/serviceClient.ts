@@ -3,6 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Service } from '../models/service';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
+import { Calificacion } from '../models/calificacion';
 
 @Injectable({providedIn : "root"})
 
@@ -50,4 +51,13 @@ export class ServiceClient {
 
     }
 
+    // calificacion
+
+    addCalification(calificacion: Calificacion, idService : number) : Observable<Calificacion> {
+      let url = this.apiUrl + "/test/service/calification/"+idService;
+
+      return this.http
+        .post<Calificacion>(url, calificacion);
+
+    }
 }
